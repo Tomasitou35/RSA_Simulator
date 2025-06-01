@@ -1,0 +1,46 @@
+# Archivos y carpetas de configuración local de Visual Studio
+.vs/
+*.user
+*.suo
+
+# Archivos de solución temporales
+*.VC.db
+*.VC.opendb
+
+# Compilación y binarios
+x64/
+Debug/
+Release/
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+*.idb
+*.ipch
+
+# Archivos de log de compilación
+*.log
+
+# Archivos intermedios de compilación
+*.tlog
+*.cache
+*.ilk
+
+# Carpetas generadas por el sistema
+ipch/
+*.aps
+
+# Backup de Visual Studio
+*_i.c
+*_p.c
+*.i
+*.pch
+
+# Archivos de configuración del entorno
+*.ncb
+*.sdf
+
+# Otros
+*.db
+*.opensdf
