@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PrivateAdministration.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\PrivateAdministration.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Arithmetics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\Arithmetics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Arithmetics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\Arithmetics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PublicAdministration.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\PublicAdministration.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\Menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PublicAdministration.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\PublicAdministration.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PrivateAdministration.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\PrivateAdministration.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\RSA_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F3FC020-5480-4234-B716-05832D3D3161}|RSA_Manager\\RSA_Manager.vcxproj|solutionrelative:RSA_Manager\\RSA_Manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RSA_Manager.cpp",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\RSA_Manager.cpp",
+              "RelativeDocumentMoniker": "RSA_Manager\\RSA_Manager.cpp",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\RSA_Manager.cpp",
+              "RelativeToolTip": "RSA_Manager\\RSA_Manager.cpp",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAiwIMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-22T09:28:08.065Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Menu.h",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Menu.h",
+              "RelativeDocumentMoniker": "RSA_Manager\\Menu.h",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Menu.h",
+              "RelativeToolTip": "RSA_Manager\\Menu.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-23T17:27:58.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Menu.cpp",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Menu.cpp",
+              "RelativeDocumentMoniker": "RSA_Manager\\Menu.cpp",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Menu.cpp",
+              "RelativeToolTip": "RSA_Manager\\Menu.cpp",
+              "ViewState": "AgIAANQAAAAAAAAAAAAiwOIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-23T17:29:25.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Arithmetics.h",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Arithmetics.h",
+              "RelativeDocumentMoniker": "RSA_Manager\\Arithmetics.h",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Arithmetics.h",
+              "RelativeToolTip": "RSA_Manager\\Arithmetics.h",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-22T10:05:50.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Arithmetics.cpp",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Arithmetics.cpp",
+              "RelativeDocumentMoniker": "RSA_Manager\\Arithmetics.cpp",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\Arithmetics.cpp",
+              "RelativeToolTip": "RSA_Manager\\Arithmetics.cpp",
+              "ViewState": "AgIAACwBAAAAAAAAAAAiwEcBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-22T10:07:52.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PublicAdministration.h",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PublicAdministration.h",
+              "RelativeDocumentMoniker": "RSA_Manager\\PublicAdministration.h",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PublicAdministration.h",
+              "RelativeToolTip": "RSA_Manager\\PublicAdministration.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-24T18:54:27.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PublicAdministration.cpp",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PublicAdministration.cpp",
+              "RelativeDocumentMoniker": "RSA_Manager\\PublicAdministration.cpp",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PublicAdministration.cpp",
+              "RelativeToolTip": "RSA_Manager\\PublicAdministration.cpp",
+              "ViewState": "AgIAABwAAAAAAAAAAAASwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-25T20:49:34.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PrivateAdministration.h",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PrivateAdministration.h",
+              "RelativeDocumentMoniker": "RSA_Manager\\PrivateAdministration.h",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PrivateAdministration.h",
+              "RelativeToolTip": "RSA_Manager\\PrivateAdministration.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-25T21:08:01.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PrivateAdministration.cpp",
+              "DocumentMoniker": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PrivateAdministration.cpp",
+              "RelativeDocumentMoniker": "RSA_Manager\\PrivateAdministration.cpp",
+              "ToolTip": "C:\\Users\\Tomas\u00EDn\\Desktop\\PROGRAM IN C\\C\u002B\u002B\\RSA_Manager\\RSA_Manager\\PrivateAdministration.cpp",
+              "RelativeToolTip": "RSA_Manager\\PrivateAdministration.cpp",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-25T21:12:17.683Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
