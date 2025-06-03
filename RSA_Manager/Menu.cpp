@@ -10,23 +10,13 @@ char Menu::MainMenu()
     std::cout << "\n\tRSA MANAGER V.1.0"
         << "\n============================================="
 
-        << "\n PUBLIC KEY:"
-        << "\n-------------------------------------"
-        << "\n 1. Set/Change prime numbers for Public Key."
-        << "\n 2. Show Public Key."
-        << "\n 3. Create Public Key."
-        << "\n 4. Erase Public Key."
-
-        << "\n\n PRIVATE KEY: "
-        << "\n-------------------------------------"
-        << "\n 5. Create Private Key."
-        << "\n 6. Show Private Key (password will be needed)."
-        << "\n 7. Erase Private Key (password will be needed)."
-
-        << "\n\n OTHER FUNCTIONALITIES:"
-        << "\n-------------------------------------"
-        << "\n 8. Arithmetical Menu."
-        << "\n 9. Exit program."
+        << "\n 1. Create a new profile."
+        << "\n 2. Select an existing profile."
+        << "\n 3. Send message to another profile."
+        << "\n 4. Open mail box."
+        << "\n 5. Remove a profile (Private Key needed)."
+        << "\n 6. Access the Modular Arithmetic Calculator."
+        << "\n 7. Exit."
         << "\n\n > Selection: ";
     std::cin >> option;
     system("cls");

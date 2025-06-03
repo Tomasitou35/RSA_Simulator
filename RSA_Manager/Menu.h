@@ -5,7 +5,6 @@
 #include "Arithmetics.h"
 #include "PublicAdministration.h"
 
-// TODO: Rethink the actual usefulness of some methods; maybe some are redundant.
 class Menu // contains all the functions that displays the menu
 {
 private:
