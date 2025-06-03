@@ -6,7 +6,7 @@
 int main()
 {
     /*
-        DOCUMENTATION HERE:
+        DOCUMENTATION HERE (for fast check):
         > https://en.cppreference.com/w/
         > https://stackoverflow.com/questions
         > https://www.w3schools.com/cpp/default.asp

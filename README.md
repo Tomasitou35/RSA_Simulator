@@ -149,4 +149,4 @@ and for expanding knowledge around RSA and cryptography.
 
 Created by Tomasitou35
 [GitHub Profile](https://github.com/Tomasitou35)
-Music composser and producer by passion, programmer by training.
+Music composer and producer by passion, programmer by training.
