@@ -30,6 +30,8 @@ Tiago has the private key to open his mailbox and read the message:
 
 > "How does light bend if photons have no mass?"
 
+Tiago should never have opened that filthy envelope. 
+
 This example reflects the essence of asymmetric encryption: anyone can send messages using the public key, but only the owner of the
 private key can read them.
 
