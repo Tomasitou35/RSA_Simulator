@@ -1,18 +1,22 @@
-﻿#include <iostream>
-#include <Windows.h>
-#include "Arithmetics.h"
 #include "Menu.h"
 
 int main()
 {
-    /*
+    Menu::start();
+    return 0;
+}
+
+
+
+
+/*
         DOCUMENTATION HERE (for fast check):
         > https://en.cppreference.com/w/
         > https://stackoverflow.com/questions
         > https://www.w3schools.com/cpp/default.asp
-    */
+*/
 
-    /*
+/*
         NEW DESIGN:
 
         MAIN MENU:
@@ -78,10 +82,3 @@ int main()
             > Messages remain visible in the inbox even after being read, until manually deleted.
               This helps demonstrate RSA functionality
     */
-
-    Menu myMenu;
-
-    char option;
-    option = myMenu.MainMenu();
-}
-

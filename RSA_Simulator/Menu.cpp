@@ -1,4 +1,15 @@
 #include "Menu.h"
+#include <iostream>
+
+void Menu::start()
+{
+	std::cout << "Hey I've started!";
+}
+
+
+/*
+
+#include "Menu.h"
 #include "Arithmetics.h"
 
 char Menu::MainMenu()
@@ -63,7 +74,7 @@ void Menu::CheckPrime()
         std::cout << " not";
     }
     std::cout << " prime. ";
-    
+
     std::cin.ignore();
     std::cin.get();
 }
@@ -276,3 +287,5 @@ void Menu::ErasePrivateKey()
 {
 
 }
+
+*/

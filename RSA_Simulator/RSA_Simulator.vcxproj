@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8f3fc020-5480-4234-b716-05832d3d3161}</ProjectGuid>
-    <RootNamespace>RSAManager</RootNamespace>
+    <ProjectGuid>{afbbe7f7-3de8-45fd-8062-b157f2de7fdd}</ProjectGuid>
+    <RootNamespace>RSASimulator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,16 +128,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arithmetics.cpp" />
+    <ClCompile Include="KeyGenerator.cpp" />
     <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="PrivateAdministration.cpp" />
-    <ClCompile Include="PublicAdministration.cpp" />
+    <ClCompile Include="Message.cpp" />
+    <ClCompile Include="Profile.cpp" />
     <ClCompile Include="RSA_Manager.cpp" />
+    <ClCompile Include="RSA_Simulator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arithmetics.h" />
+    <ClInclude Include="KeyGenerator.h" />
     <ClInclude Include="Menu.h" />
-    <ClInclude Include="PrivateAdministration.h" />
-    <ClInclude Include="PublicAdministration.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="Profile.h" />
+    <ClInclude Include="RSA_Manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

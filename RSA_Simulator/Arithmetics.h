@@ -1,3 +1,14 @@
+#ifndef ARITHMETICS_H
+#define ARITHMETICS_H
+
+class Arithmetics
+{
+};
+
+#endif
+
+/*
+
 #ifndef Arithmetics_h
 #define Arithmetics_h
 
@@ -11,10 +22,12 @@
    (which actually has SO much sense because as a Public Key User, you shouldn't be able to access Private Key
    functions too, as well as both subclasses could access superclass' arithmetic methods freely).
 */
+
+/*
 class Arithmetics // contains all the arithmetical operations needed in order to build up an RSA algorythm
 {
 protected:
-	
+
 	int p; // first prime number for the public key
 	int q; // second prime number for the public key
 
@@ -58,7 +71,9 @@ public:
 	std::vector<int> Encrypt(char message, int e, int module); // by making use of the public key, a message is encrypted and stored as a vector
 
 	std::vector<int> Dencrypt(std::vector<int> encryptedMessage, std::vector<int> publicKey); // by making use of the private key, the encrypted message getsç
-																							  // dencrypted and stored back again in a vector
+	// dencrypted and stored back again in a vector
 
 };
 #endif
+
+*/

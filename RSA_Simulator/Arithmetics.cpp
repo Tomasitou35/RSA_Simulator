@@ -1,5 +1,9 @@
 #include "Arithmetics.h"
 
+/*
+
+#include "Arithmetics.h"
+
 Arithmetics::Arithmetics()
 {
     SetP(0);
@@ -45,27 +49,28 @@ bool Arithmetics::IsPrimeNumber(int num)
         Neither 1 nor 0 are prime numbers, that is, 2 is the one we'll start checking.
     */
 
-    bool isPrime = true; // it's easier if we start assuming every number is prime
-    int i = 2; // index 
+/*
+bool isPrime = true; // it's easier if we start assuming every number is prime
+int i = 2; // index 
 
-    if (num <= 1)
+if (num <= 1)
+{
+    return false;
+}
+
+while (i <= std::sqrt(num) && isPrime)
+{
+    if (num % i == 0) // we found a valid divisor (bad news actually)
     {
-        return false;
+        isPrime = false;
     }
-
-    while (i <= std::sqrt(num) && isPrime)
+    else
     {
-        if (num % i == 0) // we found a valid divisor (bad news actually)
-        {
-            isPrime = false;
-        }
-        else
-        {
-            i++;
-        }
+        i++;
     }
+}
 
-    return isPrime;
+return isPrime;
 }
 
 // TODO: Make something funny with this weirdo.
@@ -76,16 +81,16 @@ std::vector<int> Arithmetics::GeneratePrimes(int quantity, int from, int to)
         uniform distribution, and stores them in a vector. Because ranges can be manually set,
         duplicate primes are allowed (on the other way certain ranges could cause infinite loops).
         In order to do so, first we need to check if all parameters are valid.
- 
+
         For example, if we wanted to generate 4 prime numbers between 2 and 50, a coherent output
         would be [2, 17, 29, 47].
 
         example of range random number generation between bounds:
         - from = 2
-        - to = 50 (48 random numbers possible)  
+        - to = 50 (48 random numbers possible)
 
     */
-    
+/*
     std::vector<int> primeVector;
 
     if (quantity <= 0 || from >= to)
@@ -108,7 +113,7 @@ std::vector<int> Arithmetics::GeneratePrimes(int quantity, int from, int to)
     }
 
     // for being sure
-    if(primesAvailable.empty())
+    if (primesAvailable.empty())
     {
         std::cout << "\n [ERROR]: No primes within (" << from << ", " << to << ").";
         return primeVector;
@@ -117,7 +122,7 @@ std::vector<int> Arithmetics::GeneratePrimes(int quantity, int from, int to)
     // setting the seed for random number generation
     std::random_device rd; // a seed source for the random number engine
     std::mt19937 gen(rd()); // mersenne_twister_engine seeded with rd()
-    std::uniform_int_distribution<> distrib(0, primesAvailable.size()-1); // fixing vector size
+    std::uniform_int_distribution<> distrib(0, primesAvailable.size() - 1); // fixing vector size
 
     // generating the final vector taking in consideration all the stored prime numbers
     int counter = 0;
@@ -180,7 +185,7 @@ int Arithmetics::GCD(int dividend, int divisor)
     */
 
     // a = c * b + d <-------> gcd(a,b) = gcd(b,d) (just for visualization)
-    
+/*
     // permutation in case of wrong imput
     if (divisor > dividend)
     {
@@ -215,7 +220,7 @@ std::vector<int> Arithmetics::AllDivisors(int num)
     /*
         In this case we need to reach half of the size of the number given
     */
-
+/*
     int i = 1;
     std::vector<int> divisors;
 
@@ -226,7 +231,7 @@ std::vector<int> Arithmetics::AllDivisors(int num)
         {
             divisors.push_back(i);
         }
-           
+
         i++;
     }
     return divisors;
@@ -257,8 +262,8 @@ std::vector<int> Arithmetics::Factorize(int num)
         std::cout << "\n [ERROR]: el numero debe ser entero y mayor que 1.\n";
         return factorized;
     }
-    
-    if(IsPrimeNumber(num))
+
+    if (IsPrimeNumber(num))
     {
         factorized.push_back(num);
         return factorized;
@@ -272,7 +277,7 @@ std::vector<int> Arithmetics::Factorize(int num)
     int current = num;
 
     // stops whenever the current number to divide is 1 or we reached the end of the primes vector
-    while(current > 1 && i < primesInRange.size())
+    while (current > 1 && i < primesInRange.size())
     {
 
         int prime = primesInRange[i];
@@ -305,7 +310,7 @@ int Arithmetics::EulerFunction(int m)
 
         phi(m) = m · (1 - 1/p1) · ... · (1 - 1/pn).
     */
-
+/*
     if (IsPrimeNumber(m))
     {
         return (m - 1);
@@ -323,7 +328,7 @@ int Arithmetics::EulerFunction(int m)
 
             // because we always substract the 1/p to 1, at the end we end up with just the product
             // between numerators, leading to: (p1-1)*(p2-1)*...*(pn-1), which is also phi(m)
-            phi *= (prime-1);
+            phi *= (prime - 1);
         }
         return phi;
     }
@@ -344,3 +349,5 @@ int Arithmetics::Congruences(float base, float exponent, int module)
 
     return result;
 }
+
+*/
