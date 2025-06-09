@@ -1,36 +1,6 @@
 #include "Arithmetics.h"
 
-/*
-
-#include "Arithmetics.h"
-
-Arithmetics::Arithmetics()
-{
-    SetP(0);
-    SetQ(0);
-}
-
-void Arithmetics::SetP(int pPrime)
-{
-    p = pPrime;
-}
-
-int Arithmetics::GetP()
-{
-    return p;
-}
-
-void Arithmetics::SetQ(int QPrime)
-{
-    q = QPrime;
-}
-
-int Arithmetics::GetQ()
-{
-    return q;
-}
-
-bool Arithmetics::IsPrimeNumber(int num)
+bool Arithmetics::IsPrimeNumber(long num)
 {
     /*
         PRIME NUMBER VERIFICATION:
@@ -49,7 +19,6 @@ bool Arithmetics::IsPrimeNumber(int num)
         Neither 1 nor 0 are prime numbers, that is, 2 is the one we'll start checking.
     */
 
-/*
 bool isPrime = true; // it's easier if we start assuming every number is prime
 int i = 2; // index 
 
@@ -60,7 +29,7 @@ if (num <= 1)
 
 while (i <= std::sqrt(num) && isPrime)
 {
-    if (num % i == 0) // we found a valid divisor (bad news actually)
+    if (num % i == 0) // we found a valid divisor (which are actually bad news)
     {
         isPrime = false;
     }
@@ -69,102 +38,10 @@ while (i <= std::sqrt(num) && isPrime)
         i++;
     }
 }
-
 return isPrime;
 }
 
-// TODO: Make something funny with this weirdo.
-std::vector<int> Arithmetics::GeneratePrimes(int quantity, int from, int to)
-{
-    /*
-        This method generates random prime numbers by using the clock system, a given range and
-        uniform distribution, and stores them in a vector. Because ranges can be manually set,
-        duplicate primes are allowed (on the other way certain ranges could cause infinite loops).
-        In order to do so, first we need to check if all parameters are valid.
-
-        For example, if we wanted to generate 4 prime numbers between 2 and 50, a coherent output
-        would be [2, 17, 29, 47].
-
-        example of range random number generation between bounds:
-        - from = 2
-        - to = 50 (48 random numbers possible)
-
-    */
-/*
-    std::vector<int> primeVector;
-
-    if (quantity <= 0 || from >= to)
-    {
-        return primeVector; // return an empty primeVector
-    }
-
-    std::vector<int> primesAvailable; // auxiliary primes' storage
-
-    int candidate = from;
-
-    // fill primesAvailable with ALL prime numbers in the range given
-    while (candidate <= to)
-    {
-        if (IsPrimeNumber(candidate))
-        {
-            primesAvailable.push_back(candidate);
-        }
-        candidate++; // valid prime number in the bounds given
-    }
-
-    // for being sure
-    if (primesAvailable.empty())
-    {
-        std::cout << "\n [ERROR]: No primes within (" << from << ", " << to << ").";
-        return primeVector;
-    }
-
-    // setting the seed for random number generation
-    std::random_device rd; // a seed source for the random number engine
-    std::mt19937 gen(rd()); // mersenne_twister_engine seeded with rd()
-    std::uniform_int_distribution<> distrib(0, primesAvailable.size() - 1); // fixing vector size
-
-    // generating the final vector taking in consideration all the stored prime numbers
-    int counter = 0;
-
-    while (counter < quantity)
-    {
-        int randomNumber = distrib(gen);
-
-        primeVector.push_back(primesAvailable[randomNumber]);
-        counter++;
-    }
-
-    return primeVector;
-}
-
-void Arithmetics::ShowVector(std::vector<int> vector)
-{
-    if (vector.empty())
-    {
-        std::cout << "\n [ERROR]: The field is empty.";
-    }
-    else
-    {
-        std::cout << "\n [";
-        for (int i = 0; i < vector.size(); i++)
-        {
-            // the last element in the vector
-            if (i == vector.size() - 1)
-            {
-                std::cout << vector[i] << "]";
-            }
-            else
-            {
-                std::cout << vector[i] << ", ";
-            }
-        }
-        std::cout << "\n";
-    }
-}
-
-// TODO: It doesn't handle negative inputs
-int Arithmetics::GCD(int dividend, int divisor)
+long Arithmetics::GCD(long dividend, long divisor)
 {
     /*
         EUCLID'S ALGORITHM:
@@ -185,19 +62,19 @@ int Arithmetics::GCD(int dividend, int divisor)
     */
 
     // a = c * b + d <-------> gcd(a,b) = gcd(b,d) (just for visualization)
-/*
-    // permutation in case of wrong imput
+
+    // permutation in case of wrong imput order
     if (divisor > dividend)
     {
-        int aux;
+        long aux;
 
         aux = divisor;
         divisor = dividend;
         dividend = aux;
     }
 
-    int coeficent = dividend / divisor;
-    int remainder = dividend % divisor;
+    long coeficent = dividend / divisor;
+    long remainder = dividend % divisor;
 
     if (remainder == 0)
     {
@@ -220,7 +97,7 @@ std::vector<int> Arithmetics::AllDivisors(int num)
     /*
         In this case we need to reach half of the size of the number given
     */
-/*
+    
     int i = 1;
     std::vector<int> divisors;
 
@@ -297,6 +174,7 @@ std::vector<int> Arithmetics::Factorize(int num)
     return factorized;
 }
 
+// TODO: I think this doesn't work as intended
 int Arithmetics::EulerFunction(int m)
 {
     /*
@@ -310,7 +188,7 @@ int Arithmetics::EulerFunction(int m)
 
         phi(m) = m · (1 - 1/p1) · ... · (1 - 1/pn).
     */
-/*
+
     if (IsPrimeNumber(m))
     {
         return (m - 1);
@@ -333,21 +211,3 @@ int Arithmetics::EulerFunction(int m)
         return phi;
     }
 }
-
-int Arithmetics::Congruences(float base, float exponent, int module)
-{
-    // base^exponent (mod module)
-
-    // calculate de first power
-
-    float power = powf(base, exponent);
-    float delta = power / module;
-
-    float resultUnRounded = (delta - trunc(delta)) * module;
-
-    int result = round(resultUnRounded);
-
-    return result;
-}
-
-*/

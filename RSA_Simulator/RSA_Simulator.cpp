@@ -2,7 +2,7 @@
 
 int main()
 {
-    Menu::start();
+    Start();
     return 0;
 }
 
