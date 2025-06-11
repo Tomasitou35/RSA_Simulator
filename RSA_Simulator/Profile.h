@@ -22,7 +22,7 @@ public:
 
 	Key PublicKey;
 
-	Profile();
+	Profile(Key PK, Key DK, std::string name);
 
 	void SetProfileName(std::string& myProfileName);
 

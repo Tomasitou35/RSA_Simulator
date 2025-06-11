@@ -9,12 +9,14 @@ class RSA_Manager
 {
 private:
 
-	Profile profile;
+	std::vector<Profile> profiles;
 	KeyGenerator keyGenerator;
 
 public:
 
-	
+	// for now, it only asks for name
+	bool AddProfile(Profile profile);
+	bool SeekName(std::string name);
 
 };
 

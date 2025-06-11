@@ -130,6 +130,8 @@ std::vector<long long> Arithmetics::AllPrimesInRange(long long current, long lon
     return fixed;
 }
 
+// TODO: This works just fine, but a more efficient factor algorithm like Pollard Rho could be better.
+// TODO: Could be nice to also count how much time did cost to factorize the number.
 std::vector<long long> Arithmetics::Factorize(long long num)
 {
     std::vector<long long> factorized;
@@ -157,7 +159,7 @@ std::vector<long long> Arithmetics::Factorize(long long num)
     while (current > 1 && i < primesInRange.size())
     {
 
-        long prime = primesInRange[i];
+        long long prime = primesInRange[i];
 
         if (current % prime == 0)
         {

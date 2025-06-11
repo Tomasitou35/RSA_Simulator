@@ -22,8 +22,8 @@ void Start()
             Arithmetics m_arithmetics;
             std::vector<long long> show;
             long long euler;
-            long long p = 3571;
-            long long q = 3793;
+            long long p = 7;
+            long long q = 97;
 
             std::cout << "\n P: " << p << "\n Q: " << q << "\n";
 
@@ -46,10 +46,6 @@ void Start()
                 std::cout << "\n XD";
             }
 
-            std::cout << "\n Trata de sacar los primos que he usado para " << PK.values[0] << ": ";
-            show = m_arithmetics.Factorize(PK.values[0]);
-            ShowVector(show);
-
             Confirm();
             break;
         }
@@ -57,6 +53,29 @@ void Start()
         // SELECT PROFILE
         case '2':
         {
+            // TODO: Find out why this doesn't work
+            Key PK, DK;
+            PK = { 7, 97 };
+            DK = { 5, 45 };
+
+            std::string name = "Tomas";
+            Profile test = {PK, DK, name};
+
+            RSA_Manager manager;
+            manager.AddProfile(test);
+            std::string thing = test.GetProfileName();
+
+            std::cout << thing;
+
+            if (manager.SeekName("Tomas"))
+            {
+                std::cout << "encontrado.";
+            }
+            else
+            {
+                std::cout << " no encontrado";
+            }
+            Confirm();
             break;
         }
 
@@ -191,7 +210,7 @@ void Menu::ModularCalculator()
         // COPRIMES
         case '3':
         {
-
+            CheckCoprimes();
             break;
         }
 
@@ -205,6 +224,7 @@ void Menu::ModularCalculator()
         // FACTORIZE
         case '5':
         {
+            FactorizeNumber();
             break;
         }
 
@@ -285,5 +305,36 @@ void Menu::GCD()
         }
         std::cout << "\n GCD(" << p << ", " << q << ") = " << gcd << " ";
     }
+    Confirm();
+}
+
+void Menu::CheckCoprimes()
+{
+    long long a, b;
+
+    std::cout << "\n First number: ";
+    std::cin >> a;
+    std::cout << " Second number: ";
+    std::cin >> b;
+
+    std::cout << "\n " << a << " and " << b << " are";
+    if (!arithmetics.AreCoprimes(a, b))
+    {
+        std::cout << " not";
+    }
+    std::cout << " coprimes. ";
+
+    Confirm();
+}
+
+void Menu::FactorizeNumber()
+{
+    long long n;
+    std::cout << "\n Number: ";
+    std::cin >> n;
+
+    std::vector<long long> factorized = arithmetics.Factorize(n);
+    std::cout << "\n " << n << " = ";
+    ShowVector(factorized);
     Confirm();
 }

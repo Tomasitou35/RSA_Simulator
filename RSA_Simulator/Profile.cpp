@@ -1,10 +1,10 @@
 #include "Profile.h"
 
-Profile::Profile()
+Profile::Profile(Key PK, Key DK, std::string name)
 {
-	privateKey = { 0,0 };
-	PublicKey = { 0,0 };
-	profileName = "";
+	PK = { 0,0 };
+	DK = { 0,0 };
+	name = "";
 }
 
 void Profile::SetProfileName(std::string& myProfileName)

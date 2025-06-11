@@ -36,7 +36,7 @@ public:
 
 	void CheckCoprimes();
 
-	void Factorize();
+	void FactorizeNumber();
 
 	void AllPrimesInRange();
 
