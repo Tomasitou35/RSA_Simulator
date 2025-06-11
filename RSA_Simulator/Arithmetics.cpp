@@ -1,6 +1,6 @@
 #include "Arithmetics.h"
 
-bool Arithmetics::IsPrimeNumber(long num)
+bool Arithmetics::IsPrimeNumber(long long num)
 {
     /*
         PRIME NUMBER VERIFICATION:
@@ -41,7 +41,7 @@ while (i <= std::sqrt(num) && isPrime)
 return isPrime;
 }
 
-long Arithmetics::GCD(long dividend, long divisor)
+long long Arithmetics::GCD(long long dividend, long long divisor)
 {
     /*
         EUCLID'S ALGORITHM:
@@ -86,20 +86,20 @@ long Arithmetics::GCD(long dividend, long divisor)
     }
 }
 
-bool Arithmetics::AreCoprimes(int a, int b)
+bool Arithmetics::AreCoprimes(long long a, long long b)
 {
     // two numbers are coprimes between each other if it's GCD is just 1
     return(GCD(a, b) == 1);
 }
 
-std::vector<int> Arithmetics::AllDivisors(int num)
+std::vector<long long> Arithmetics::AllDivisors(long long num)
 {
     /*
         In this case we need to reach half of the size of the number given
     */
     
-    int i = 1;
-    std::vector<int> divisors;
+    long i = 1;
+    std::vector<long long> divisors;
 
     // storing every possible divisor
     while (i <= (num / 2))
@@ -114,9 +114,9 @@ std::vector<int> Arithmetics::AllDivisors(int num)
     return divisors;
 }
 
-std::vector<int> Arithmetics::AllPrimesInRange(int current, int range)
+std::vector<long long> Arithmetics::AllPrimesInRange(long long current, long long range)
 {
-    std::vector<int> fixed;
+    std::vector<long long> fixed;
 
     while (current < range)
     {
@@ -130,9 +130,9 @@ std::vector<int> Arithmetics::AllPrimesInRange(int current, int range)
     return fixed;
 }
 
-std::vector<int> Arithmetics::Factorize(int num)
+std::vector<long long> Arithmetics::Factorize(long long num)
 {
-    std::vector<int> factorized;
+    std::vector<long long> factorized;
 
     if (num <= 1)
     {
@@ -147,17 +147,17 @@ std::vector<int> Arithmetics::Factorize(int num)
     }
 
     // setup all candidates of prime division
-    std::vector<int> primesInRange;
+    std::vector<long long> primesInRange;
     primesInRange = AllPrimesInRange(1, num);
 
-    int i = 0;
-    int current = num;
+    long i = 0;
+    long current = num;
 
     // stops whenever the current number to divide is 1 or we reached the end of the primes vector
     while (current > 1 && i < primesInRange.size())
     {
 
-        int prime = primesInRange[i];
+        long prime = primesInRange[i];
 
         if (current % prime == 0)
         {
@@ -174,8 +174,7 @@ std::vector<int> Arithmetics::Factorize(int num)
     return factorized;
 }
 
-// TODO: I think this doesn't work as intended
-int Arithmetics::EulerFunction(int m)
+long long Arithmetics::EulerFunction(long long m)
 {
     /*
         For each m >= 1, and phi(m) being the number of integers (x) comprimes with m
@@ -187,6 +186,11 @@ int Arithmetics::EulerFunction(int m)
         factorization will be:
 
         phi(m) = m · (1 - 1/p1) · ... · (1 - 1/pn).
+        We only choose a prime number once, that is, if we calculate the Euler's Totient
+        for 8, being 2^3, we'd only select one 2, resulting on:
+
+        phi(8) = 8 · (1 - 1/2) = 8 · (1/2) = 4 -> 8 has 4 coprime numbers, (which btw, are
+        1, 3, 5 and 7)
     */
 
     if (IsPrimeNumber(m))
@@ -197,17 +201,27 @@ int Arithmetics::EulerFunction(int m)
     {
         // phi(m) = m · (1 - 1/p1) · ... · (1 - 1/pn)
 
-        int phi = 1; // the answer
-        std::vector<int> factorized = Factorize(m);
+        long phi = m; // the answer
+        std::vector<long long> factorized = Factorize(m);
 
+        // we need to filter the factorized vector, deleting all the duplicates
+        std::vector<long> filtered;
         for (int i = 0; i < factorized.size(); i++)
         {
-            int prime = factorized[i];
-
-            // because we always substract the 1/p to 1, at the end we end up with just the product
-            // between numerators, leading to: (p1-1)*(p2-1)*...*(pn-1), which is also phi(m)
-            phi *= (prime - 1);
+            // intermediate values OR last value
+            if ((i>0 && factorized[i] != factorized[i-1]) || (i<factorized.size()-1 && factorized[i] != factorized[i+1]))
+            {
+                filtered.push_back(factorized[i]);
+            }
         }
+
+        float divisor = 1;
+        for (int i=0; i<filtered.size(); i++)
+        {
+            divisor *= (1 - (1.0 / filtered[i]));
+        }
+        phi *= divisor;
+
         return phi;
     }
 }

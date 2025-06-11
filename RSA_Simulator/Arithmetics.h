@@ -4,24 +4,25 @@
 #include <iostream>
 #include <cmath> // MATH, ASSEMBLE
 #include <vector> // dinamic arrays, OP
+#include <iomanip> // to not to trunc on Euler's Totient
 
 class Arithmetics
 {
 public:
 
-	bool IsPrimeNumber(long num); // checks if the number given is actually a prime number
+	bool IsPrimeNumber(long long num); // checks if the number given is actually a prime number
 
-	long GCD(long a, long b); // finds the Greater Common Divisor of two numbers using the Euclid's Algorithm
+	long long GCD(long long a, long long b); // finds the Greater Common Divisor of two numbers using the Euclid's Algorithm
 
-	bool AreCoprimes(int dividend, int divisor); // checks if two numbers are coprimes
+	bool AreCoprimes(long long dividend, long long divisor); // checks if two numbers are coprimes
 
-	std::vector<int> AllPrimesInRange(int current, int range); // returns a fixed vector containing all prime numbers within a range
+	std::vector<long long> AllPrimesInRange(long long current, long long range); // returns a fixed vector containing all prime numbers within a range
 
-	std::vector<int> AllDivisors(int num); // generates a vector which contains all possible divisors of a number given
+	std::vector<long long> AllDivisors(long long num); // generates a vector which contains all possible divisors of a number given
 
-	std::vector<int> Factorize(int num); // returns a vector which contains the product of primes of a number given
+	std::vector<long long> Factorize(long long num); // returns a vector which contains the product of primes of a number given
 
-	int EulerFunction(int m); // returns the number of coprimes with a certain digit, notated as PHI(m)
+	long long EulerFunction(long long m); // returns the number of coprimes with a certain digit, notated as PHI(m)
 
 };
 

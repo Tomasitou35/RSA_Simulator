@@ -47,4 +47,6 @@ void Start();
 
 void Confirm();
 
+void ShowVector(std::vector<long long> show);
+
 #endif

@@ -39,7 +39,7 @@ int main()
                     - Ask for two valid prime numbers
                     - Calculate n = p × q
                     - Compute Euler’s Totient φ(n)
-                    - Choose a valid exponent e (coprime with φ(n))
+                    - Choose a valid power for e (coprime with φ(n))
                 d. Show a message indicating whether the key was created or updated
 
             PRIVATE KEY:

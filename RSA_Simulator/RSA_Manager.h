@@ -7,6 +7,14 @@
 
 class RSA_Manager
 {
+private:
+
+	Profile profile;
+	KeyGenerator keyGenerator;
+
+public:
+
+	
 
 };
 

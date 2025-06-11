@@ -17,6 +17,40 @@ void Start()
         // CREATE NEW PROFILE
         case '1':
         {
+            KeyGenerator KEYGEN;
+
+            Arithmetics m_arithmetics;
+            std::vector<long long> show;
+            long long euler;
+            long long p = 3571;
+            long long q = 3793;
+
+            std::cout << "\n P: " << p << "\n Q: " << q << "\n";
+
+            Key PK = KEYGEN.GeneratePublicKey(p, q);
+
+            std::cout << "\n n = " << p * q;
+            
+            euler = m_arithmetics.EulerFunction(p * q);
+            std::cout << "\n EULER DE " << p*q << ": " << euler << "\n";
+
+            std::cout << "\n PUBLIC KEY: [" << PK.values[0] << ", " << PK.values[1] << "]";
+            
+            bool cop = m_arithmetics.AreCoprimes(PK.values[1], euler);
+            if (cop)
+            {
+                std::cout << "\n SON COPRIMOS Y FUNCIONAAA";
+            }
+            else
+            {
+                std::cout << "\n XD";
+            }
+
+            std::cout << "\n Trata de sacar los primos que he usado para " << PK.values[0] << ": ";
+            show = m_arithmetics.Factorize(PK.values[0]);
+            ShowVector(show);
+
+            Confirm();
             break;
         }
 
@@ -69,6 +103,20 @@ void Confirm()
 {
     std::cin.ignore();
     std::cin.get();
+}
+
+void ShowVector(std::vector<long long> show)
+{
+    std::cout << "\n [";
+    for (int i=0; i<show.size(); i++)
+    {
+        std::cout << show[i];
+        if (i < show.size()-1)
+        {
+            std::cout << ", ";
+        }
+    }
+    std::cout << "] ";
 }
 
 char Menu::ShowMainMenu()
