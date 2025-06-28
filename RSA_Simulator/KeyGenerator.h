@@ -3,6 +3,8 @@
 
 #include "Arithmetics.h";
 #include "Profile.h"
+#include <ctime> // for e choosing
+#include <cstdlib>
 
 class KeyGenerator
 {
@@ -14,14 +16,14 @@ private:
 		p = first prime number
 		q = second prime number
 	*/
-	long p, q;
+	long long p, q;
 	Arithmetics arithmetics;
 
 public:
 
-	Key GeneratePublicKey(long myP, long myQ);
+	Key GeneratePublicKey(long long myP, long long myQ);
 
-	Key GeneratePrivateKey();
+	Key GeneratePrivateKey(Key PK);
 };
 
 #endif

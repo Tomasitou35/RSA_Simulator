@@ -11,6 +11,7 @@ private:
 
 	std::vector<Profile> profiles;
 	KeyGenerator keyGenerator;
+	Message message;
 
 public:
 

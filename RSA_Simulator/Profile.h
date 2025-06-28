@@ -17,6 +17,7 @@ private:
 
 	Key privateKey;
 
+	std::string password;
 
 public:
 
@@ -26,11 +27,21 @@ public:
 
 	void SetProfileName(std::string& myProfileName);
 
-	std::string GetProfileName();
-
 	void SetPublicKey(Key& myPublicKey);
 
+	void SetPrivateKey(Key& myPrivateKey);
+
+	void SetPassword(std::string& myPassword);
+
+	std::string GetProfileName();
+
 	Key GetPublicKey();
+
+	Key GetPrivateKey();
+
+	std::string GetPassword();
+
+	void ShowKeys(Key key);
 };
 	
 #endif

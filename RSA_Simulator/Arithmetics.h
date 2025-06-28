@@ -6,6 +6,7 @@
 #include <vector> // dinamic arrays, OP
 #include <iomanip> // to not to trunc on Euler's Totient
 
+//TODO: Bezout's Identity resolver to find d for the DK
 class Arithmetics
 {
 public:
@@ -24,6 +25,11 @@ public:
 
 	long long EulerFunction(long long m); // returns the number of coprimes with a certain digit, notated as PHI(m)
 
+	long long Remainder(long long coefficient, long long modulus); // basic arithmetics but for long long values
+
+	long long Congruence(long long coefficient, long long remainder, long long modulus); // solves a Congruence of the form ax=b(mod n)
+
+	long long ModularPow(long long base, long long exponent, long long modulus);
 };
 
 #endif

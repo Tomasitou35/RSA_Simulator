@@ -1,6 +1,6 @@
 ﻿#include "KeyGenerator.h"
 
-Key KeyGenerator::GeneratePublicKey(long myP, long myQ)
+Key KeyGenerator::GeneratePublicKey(long long myP, long long myQ)
 {
 	Key PublicKey = { 0,0 };
 
@@ -9,31 +9,47 @@ Key KeyGenerator::GeneratePublicKey(long myP, long myQ)
 		return PublicKey;
 	}
 
-	long n = myP * myQ;
+	long long n = myP * myQ;
 
-	long eulersTotient = arithmetics.EulerFunction(n);
+	long long eulersTotient = arithmetics.EulerFunction(n);
 
 	// check for a valid e, coprime with φ(n)
 	bool eFound = false;
-	int e = 2;
+	int e = 3;
 
-	while (!eFound && e<eulersTotient)
+	while (e < eulersTotient && !eFound)
 	{
-		if (arithmetics.AreCoprimes(eulersTotient, e) && e>eulersTotient/2)
+		if (arithmetics.AreCoprimes(e, eulersTotient))
 		{
-			eFound = true;
+			eFound = true;	
 		}
 		else
 		{
-			e++;
+			e += 2;
 		}
 	}
 
-	if (eFound)
-	{
-		PublicKey.values[0] = n;
-		PublicKey.values[1] = e;
-	}
+	PublicKey.values[0] = n;
+	PublicKey.values[1] = e;
 
 	return PublicKey;
+}
+
+Key KeyGenerator::GeneratePrivateKey(Key PK)
+{
+	Key DK = {0,0};
+
+	long long n = PK.values[0];
+	long long e = PK.values[1];
+
+	long long phi = arithmetics.EulerFunction(n);
+	long long d = arithmetics.Congruence(e, 1, phi);
+
+	if (d != -1)
+	{
+		DK.values[0] = d;
+		DK.values[1] = n;
+	}
+
+	return DK;
 }

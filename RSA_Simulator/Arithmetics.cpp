@@ -66,23 +66,16 @@ long long Arithmetics::GCD(long long dividend, long long divisor)
     // permutation in case of wrong imput order
     if (divisor > dividend)
     {
-        long aux;
-
-        aux = divisor;
-        divisor = dividend;
-        dividend = aux;
+        std::swap(divisor, dividend);
     }
 
-    long coeficent = dividend / divisor;
-    long remainder = dividend % divisor;
-
-    if (remainder == 0)
+    if (divisor == 0)
     {
-        return divisor;
+        return dividend;
     }
     else
     {
-        GCD(divisor, remainder);
+        return GCD(divisor, dividend % divisor);
     }
 }
 
@@ -227,3 +220,82 @@ long long Arithmetics::EulerFunction(long long m)
         return phi;
     }
 }
+
+long long Arithmetics::Remainder(long long coefficient, long long modulus)
+{
+    long long remainder;
+
+    long long division = trunc(coefficient / modulus);
+
+    remainder = coefficient - division * modulus;
+    return remainder;
+}
+
+long long Arithmetics::Congruence(long long coefficient, long long remainder, long long modulus)
+{
+    long long gcd = GCD(coefficient, modulus);
+
+    if (remainder % gcd != 0)
+    {
+        // no solution for the congruence
+        return -1;
+    }
+
+    // Reduction
+    long long coeffReduced = coefficient / gcd;
+    long long remReduced = remainder / gcd;
+    long long modReduced = modulus / gcd;
+
+
+    // Extended Euclid's Algorithm to find Bezout's Identity
+    long long prevRemainder = coeffReduced;
+    long long curRemainder = modReduced;
+
+    long long prevCoeff = 1;
+    long long curCoeff = 0;
+
+    while (curRemainder != 0)
+    {
+        long long division = prevRemainder / curRemainder;
+
+        // remainder permutation
+        long long tempRemainder = curRemainder;
+        curRemainder = prevRemainder % curRemainder;
+        prevRemainder = tempRemainder;
+
+        // coefficientt permutation
+        long long tempCoeff = curCoeff;
+        curCoeff = prevCoeff - division * curCoeff;
+        prevCoeff = tempCoeff;
+    }
+
+    // positive values
+    long long inverse = prevCoeff;
+    if (inverse < 0)
+    {
+        inverse += modReduced;
+    }
+
+    long long solution = (inverse * remReduced) % modReduced;
+    
+    return solution;
+}
+
+long long Arithmetics::ModularPow(long long base, long long exponent, long long modulus)
+{
+    long long result = 1;
+    base %= modulus;
+
+    // based on binary modular exponentiation
+    while (exponent > 0)
+    {
+        if (exponent % 2 == 1)
+        {
+            result = (result * base) % modulus;
+        }
+        base = (base * base) % modulus;
+        exponent /= 2;
+    }
+    return result;
+}
+

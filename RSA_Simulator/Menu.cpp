@@ -1,11 +1,11 @@
-#include "Menu.h"
+﻿#include "Menu.h"
 #include <iostream>
 
+
+//TODO: Exception handleling on all these functions for the user to not to input something weird.
 void Start()
 {
-    std::cout << "\n I've started.\n";
     Menu menu;
-
     char option;
 
     do
@@ -17,35 +17,39 @@ void Start()
         // CREATE NEW PROFILE
         case '1':
         {
-            KeyGenerator KEYGEN;
+            Key PK, DK;
+            KeyGenerator keyGen;
+            PK.values[0] = 13;
+            PK.values[1] = 17;
+            PK = keyGen.GeneratePublicKey(PK.values[0], PK.values[1]);
+            DK = keyGen.GeneratePrivateKey(PK);
+            Profile profile{ PK, DK, "Tomas" };
 
-            Arithmetics m_arithmetics;
-            std::vector<long long> show;
-            long long euler;
-            long long p = 7;
-            long long q = 97;
+            std::cout << " PUBLIC KEY: "; profile.ShowKeys(PK);
+            std::cout << " PRIVATE KEY: ";  profile.ShowKeys(DK);
 
-            std::cout << "\n P: " << p << "\n Q: " << q << "\n";
-
-            Key PK = KEYGEN.GeneratePublicKey(p, q);
-
-            std::cout << "\n n = " << p * q;
+            Message message;
+            std::string mensaje, dencrypted;
+            std::vector<long long> encrypted;
             
-            euler = m_arithmetics.EulerFunction(p * q);
-            std::cout << "\n EULER DE " << p*q << ": " << euler << "\n";
 
-            std::cout << "\n PUBLIC KEY: [" << PK.values[0] << ", " << PK.values[1] << "]";
+            std::cout << "\n Mensaje: ";
+            std::cin.ignore();
+            std::getline(std::cin, mensaje);
+
+            // encryption process
+            encrypted = message.Encrypt(PK, mensaje);
+            std::cout << "\n ";
+            for (long long character : encrypted)
+            {
+                std::cout << character;
+            }
+
+            // dencryption process
+            std::cout << "\n";
+            dencrypted = message.Dencrypt(DK, encrypted);
+            std::cout << "\n " << dencrypted;
             
-            bool cop = m_arithmetics.AreCoprimes(PK.values[1], euler);
-            if (cop)
-            {
-                std::cout << "\n SON COPRIMOS Y FUNCIONAAA";
-            }
-            else
-            {
-                std::cout << "\n XD";
-            }
-
             Confirm();
             break;
         }
@@ -53,28 +57,6 @@ void Start()
         // SELECT PROFILE
         case '2':
         {
-            // TODO: Find out why this doesn't work
-            Key PK, DK;
-            PK = { 7, 97 };
-            DK = { 5, 45 };
-
-            std::string name = "Tomas";
-            Profile test = {PK, DK, name};
-
-            RSA_Manager manager;
-            manager.AddProfile(test);
-            std::string thing = test.GetProfileName();
-
-            std::cout << thing;
-
-            if (manager.SeekName("Tomas"))
-            {
-                std::cout << "encontrado.";
-            }
-            else
-            {
-                std::cout << " no encontrado";
-            }
             Confirm();
             break;
         }
@@ -82,18 +64,21 @@ void Start()
         // SEND MESSAGE
         case '3':
         {
+            Confirm();
             break;
         }
 
         // OPEN MAILBOX
         case '4':
         {
+            Confirm();
             break;
         }
 
         // REMOVE PROFILE
         case '5':
         {
+            Confirm();
             break;
         }
 
@@ -231,6 +216,7 @@ void Menu::ModularCalculator()
         // EULER'S TOTIENT
         case '6':
         {
+            EulersTotient();
             break;
         }
 
@@ -336,5 +322,16 @@ void Menu::FactorizeNumber()
     std::vector<long long> factorized = arithmetics.Factorize(n);
     std::cout << "\n " << n << " = ";
     ShowVector(factorized);
+    Confirm();
+}
+
+void Menu::EulersTotient()
+{
+    long long n, phi;
+    std::cout << "\n Number: ";
+    std::cin >> n;
+
+    phi = arithmetics.EulerFunction(n);
+    std::cout << "\n Phi(" << n << ") = " << phi << ". ";
     Confirm();
 }
