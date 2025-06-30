@@ -63,3 +63,12 @@ void Profile::ShowKeys(Key key)
 	}
 	std::cout << "] \n";
 }
+
+void Profile::ShowProfile(Profile profile)
+{
+	std::cout << "\n Name: " << profile.GetProfileName();
+	std::cout << "\n Public Key: ";
+	ShowKeys(profile.GetPublicKey());
+	std::cout << " Private Key: ";
+	ShowKeys(profile.GetPrivateKey());
+}

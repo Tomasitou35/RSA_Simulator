@@ -1,12 +1,18 @@
 ﻿#include "Menu.h"
 #include <iostream>
 
+Menu::Menu(RSA_Manager& rsaManager) : manager(rsaManager)
+{
+}
+
 
 //TODO: Exception handleling on all these functions for the user to not to input something weird.
 void Start()
 {
-    Menu menu;
     char option;
+    RSA_Manager rsaManager;
+    Menu menu(rsaManager);
+
 
     do
     {
@@ -17,6 +23,7 @@ void Start()
         // CREATE NEW PROFILE
         case '1':
         {
+            /*
             Key PK, DK;
             KeyGenerator keyGen;
             PK.values[0] = 13;
@@ -49,6 +56,50 @@ void Start()
             std::cout << "\n";
             dencrypted = message.Dencrypt(DK, encrypted);
             std::cout << "\n " << dencrypted;
+            */
+
+            std::string name;
+            std::cout << "\n Name: ";
+            std::cin.ignore();
+            std::getline(std::cin, name);
+
+            if (!rsaManager.SeekName(name))
+            {
+                long long p, q;
+                std::cout << "\n KEY GENERATION"
+                          << "\n First prime: ";
+                std::cin >> p;
+                std::cout << " Second prime: ";
+                std::cin >> q;
+
+                if (!rsaManager.arithmetics.IsPrimeNumber(p) || !rsaManager.arithmetics.IsPrimeNumber(q))
+                {
+                    std::cout << "\n [ERROR]: Both numbers has to be prime. ";
+                }
+                // because that's the length of the ascii table
+                else if (p * q < 127)
+                {
+                    std::cout << "\n [ERROR]: The product between both primes has to be greater than 127. ";
+                }
+                else
+                {
+                    Key PK, DK;
+
+                    PK = rsaManager.keyGenerator.GeneratePublicKey(p, q);
+                    DK = rsaManager.keyGenerator.GeneratePrivateKey(PK);
+                    Profile newProfile{PK, DK, name};
+                    rsaManager.AddProfile(newProfile);
+
+                    std::cout << "\n Showing profile: \n";
+                    newProfile.ShowProfile(newProfile);
+
+                    std::cout << "\n Profile added successfully. ";
+                }
+            }
+            else
+            {
+                std::cout << "\n [ERROR]: The name is currently in use. ";
+            }
             
             Confirm();
             break;
@@ -57,6 +108,20 @@ void Start()
         // SELECT PROFILE
         case '2':
         {
+            std::string name;
+            std::cout << "\n Name: ";
+            std::cin.ignore();
+            std::getline(std::cin, name);
+
+            if (rsaManager.ChooseProfile(name))
+            {
+                std::cout << "\n Profile correctly chosen. ";
+            }
+            else
+            {
+                std::cout << "\n [ERROR]: Profile could not be found. ";
+            }
+
             Confirm();
             break;
         }
@@ -160,7 +225,8 @@ char Menu::ArithmeticalMenu()
         << "\n 4. Display all prime numbers in a range."
         << "\n 5. Factorize a number into it's prime factors."
         << "\n 6. Calculate Euler's Totient of a number."
-        << "\n 7. Go back."
+        << "\n 7. Solve a Congruence."
+        << "\n 8. Go back."
         << "\n\n > Selection: ";
     std::cin >> option;
     system("cls");
@@ -220,8 +286,15 @@ void Menu::ModularCalculator()
             break;
         }
 
-        // EXIT
+        // SOLVE CONGRUENCE
         case '7':
+        {
+            Congruence();
+            break;
+        }
+
+        // EXIT
+        case '8':
         {
             std::cout << "\n Returning to main menu. ";
             Confirm();
@@ -234,7 +307,7 @@ void Menu::ModularCalculator()
             break;
         }
 
-    } while (option != '7');
+    } while (option != '8');
 }
 
 void Menu::CheckPrime()
@@ -333,5 +406,25 @@ void Menu::EulersTotient()
 
     phi = arithmetics.EulerFunction(n);
     std::cout << "\n Phi(" << n << ") = " << phi << ". ";
+    Confirm();
+}
+
+void Menu::Congruence()
+{
+    long long coefficient, remainder, modulus, result;
+    std::cout << "\n Structure: ax = b (mod n)\n";
+
+    std::cout << "\n Coefficient: ";
+    std::cin >> coefficient;
+
+    std::cout << " Remainder: ";
+    std::cin >> remainder;
+
+    std::cout << " Modulus: ";
+    std::cin >> modulus;
+
+    result = arithmetics.Congruence(coefficient, remainder, modulus);
+    std::cout << "\n\n x = " << result << " in \n " << coefficient << "*" << result << " = " << remainder << " (mod " << modulus << ") ";
+
     Confirm();
 }

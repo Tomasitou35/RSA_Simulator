@@ -7,12 +7,14 @@ class Menu
 {
 private:
 
-	RSA_Manager manager;
+	RSA_Manager& manager;
 	Arithmetics arithmetics;
 
 public:
 
 	// Main functions
+
+	Menu(RSA_Manager& rsaManager);
 
 	char ShowMainMenu();
 
@@ -41,6 +43,8 @@ public:
 	void AllPrimesInRange();
 
 	void EulersTotient();
+
+	void Congruence();
 };
 
 void Start();

@@ -42,6 +42,8 @@ public:
 	std::string GetPassword();
 
 	void ShowKeys(Key key);
+
+	void ShowProfile(Profile profile);
 };
 	
 #endif
